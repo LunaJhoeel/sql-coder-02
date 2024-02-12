@@ -1,0 +1,5 @@
+torch==2.2.0
+transformers==4.37.2
+sqlparse==0.4.4
+accelerate==0.26.1
+bitsandbytes==0.42.0
