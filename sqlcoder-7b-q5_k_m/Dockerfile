@@ -4,12 +4,12 @@ WORKDIR /app
 
 COPY ./requirements.txt /app/
 
-# ARG TORCH_HOME=/cache/torch
-# ARG HF_HOME=/cache/huggingface
+ARG TORCH_HOME=/cache/torch
+ARG HF_HOME=/cache/huggingface
 
-# # Environment variables
-# ENV TORCH_HOME=${TORCH_HOME}
-# ENV HF_HOME=${HF_HOME}
+# Environment variables
+ENV TORCH_HOME=${TORCH_HOME}
+ENV HF_HOME=${HF_HOME}
 
 # Install Python and pip and curl
 RUN apt-get update && apt-get install -y \
