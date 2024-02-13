@@ -1,6 +1,6 @@
 import runpod
-from sql_generator import generate_query, llm
-from prompts import sql_prompt
+from sql_generator import generate_query
+from model_loader import llm
 
 def handler(event):
     question = event.get("question", "")

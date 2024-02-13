@@ -1,9 +1,6 @@
 import sqlparse
-from model_loader import initialize_model
+from model_loader import llm
 from prompts import sql_prompt
-
-# Initialize the model
-llm = initialize_model("sqlcoder-7b-q5_k_m.gguf")
 
 prompt = sql_prompt[0]
 
