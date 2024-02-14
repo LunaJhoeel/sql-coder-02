@@ -3,15 +3,14 @@ from llama_cpp import Llama
 from prompts import sql_prompt
 from utils import format_sql
 
-# CPU
+
 def initialize_model(model_path, seed=42, n_ctx=2048, n_batch=126):
     llm = Llama(
         model_path=model_path,
-        n_gpu_layers=0,
+        n_gpu_layers=0,  # CPU only
         seed=seed,
         n_ctx=n_ctx,
-        n_batch=n_batch,
-        device='cpu'
+        n_batch=n_batch
     )
     return llm
 
