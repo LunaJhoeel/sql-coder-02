@@ -1,0 +1,4 @@
+sqlparse==0.4.4
+runpod==1.6.2
+llama-cpp-python==0.2.39
+pydantic==1.10.11

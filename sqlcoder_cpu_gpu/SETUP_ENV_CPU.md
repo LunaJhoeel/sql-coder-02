@@ -11,4 +11,4 @@ pip install -r requirements.txt
 curl -L "https://huggingface.co/defog/sqlcoder-7b-2/resolve/main/sqlcoder-7b-q5_k_m.gguf?download=true" -o sqlcoder-7b-q5_k_m.gguf
 
 ## Test
-python handler.py --test_input '{"input": {"question": "What was our revenue by product in the New York region last month?"}}'
+python handler_cpu.py --test_input '{"input": {"question": "What was our revenue by product in the New York region last month?"}}'
