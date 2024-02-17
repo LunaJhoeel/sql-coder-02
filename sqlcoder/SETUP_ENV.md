@@ -1,4 +1,5 @@
-# Creating a venv Environment for Scripts
+# Commands to test locally
+## Creating a venv Environment for Scripts
 python3.10 -m venv venv
 
 ## Activating the Environment
