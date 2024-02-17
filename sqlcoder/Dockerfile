@@ -97,4 +97,4 @@ COPY . /app
 STOPSIGNAL SIGINT
 
 # Runpod serverless configuration
-CMD [ "python", "-u", "handler_gpu.py" ]
+CMD [ "python", "-u", "handler.py" ]

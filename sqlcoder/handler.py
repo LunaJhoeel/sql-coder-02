@@ -38,21 +38,14 @@ def generate_query(sql_request: SQLRequest, model):
     
     return format_sql(generated_sql)
 
-def handler(event):
-    print("Evento recibido:", event)
-    input_data = event.get("input", {})
-    print("Datos de input:", input_data)
+def handler(job):
+    job_input = job.get("input", {})
     try:
-        sql_request = SQLRequest(**input_data)
+        sql_request = SQLRequest(**job_input)
     except ValidationError as e:
         return {"error": str(e)}
 
     generated_sql = generate_query(sql_request, llm)
-    print("==================================================")
-    print("GENERATED SQL:")
-    print("==================================================")
-    print(f"{generated_sql}")
-    print("==================================================")
-    return {"generated_sql": generated_sql}
+    return generated_sql
 
 runpod.serverless.start({"handler": handler})
